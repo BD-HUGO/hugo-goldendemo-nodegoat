@@ -49,7 +49,7 @@ jobs:
           polaris_prComment_enabled: true
           github_token: ${{ secrets.GH_TOKEN }}
 
-          polaris_application_name: "hugo-demo-polaris"
+          polaris_application_name: "BlackDuck-Demo"
           polaris_project_name: "hugo-goldendemo-nodegoat"
 
           ### ---------- SRM SCANNING: REQUIRED FIELDS ----------
