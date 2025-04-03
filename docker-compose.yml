@@ -3,7 +3,7 @@ version: "3.7"
 services:
   web:
     cap_drop:
-      - Net_RAW
+      - NET_RAW
     build: .
     environment:
       NODE_ENV:
@@ -13,6 +13,8 @@ services:
       - "4000:4000"
 
   mongo:
+    cap_drop:
+      - NET_RAW
     image: mongo:4.4
     user: mongodb
     expose:
