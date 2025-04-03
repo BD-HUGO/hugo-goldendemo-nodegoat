@@ -3,7 +3,10 @@ version: "3.7"
 services:
   web:
     cap_drop:
-      - NET_RAW
+      - All
+    cap_add:
+      - CHOWN
+      - DAC_OVERRIDE
     build: .
     environment:
       NODE_ENV:
@@ -14,7 +17,10 @@ services:
 
   mongo:
     cap_drop:
-      - NET_RAW
+      - All
+    cap_add:
+      - CHOWN
+      - DAC_OVERRIDE
     image: mongo:4.4
     user: mongodb
     expose:
